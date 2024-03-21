@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <!-- this is not neccessary for reproduction, but it trims the source references in the output DLL -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <Deterministic>True</Deterministic>
+    <ContinuousIntegrationBuild>True</ContinuousIntegrationBuild>
+    <EmbedUntrackedSources>True</EmbedUntrackedSources>
+    <IncludeSymbols>True</IncludeSymbols>
+  </PropertyGroup>
+
+</Project>
